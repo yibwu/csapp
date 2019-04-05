@@ -1,0 +1,3 @@
+A. result = x & 0xFF
+B. result = x ^ (~0 << 8) 
+C. result = x | 0xFF
