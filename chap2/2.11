@@ -1,0 +1,17 @@
+A. cnt = 2k + 1, first = k, last = k
+    void inplace_swap(int* x, int* y)
+    {
+        *y = *x ^ *y /* step 1 */
+        *x = *x ^ *y /* step 2 */
+        *y = *x ^ *y /* step 3 */
+    }
+B. 当inplace_swap函数中的两个指针变量x, y指向的地址相同时, 在step1的时候, *x ^ *y == 0, 将0赋值给*y, 将会覆盖原来的值
+C.  void reverse_array(int a[], int cnt)
+    {
+        int first, last;
+        for (first = 0, last = cnt - 1; first < last; first++, last--)
+        {
+            inplace_swap(&a[first], &a[last]);
+        }
+    }
+    将12行处的first <= last改为first < last即可
