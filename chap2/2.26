@@ -1,0 +1,3 @@
+A. 当strlen(s)的结果小于strlen(t)的时候，会产生不正确的结果
+B. 执行语句strlen(s) - strlen(t) > 0时，两个unsigned int类型的数值进行相减时，得到的结果仍是unsigned int类型的，所以结果会大于或等于0。当出现A中描述的情况时，就会出现与预期不同的结果
+C. return strlen(s) - strlen(t) > 0; 改为return strlen(s) > strlen(t);
