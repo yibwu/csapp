@@ -1,0 +1,2 @@
+A. 当for循环中进行条件判断i <= length - 1时，length - 1等价于(unsigned) (0 - 1)，得到的结果大于0，程序接着执行到result += a[i]时，试图访问一个空数组的第一个元素，导致运行时错误。
+B. i <= length - 1改为 i < length
