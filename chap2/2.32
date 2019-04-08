@@ -1,0 +1,12 @@
+A. 当y取MIN_INT时，对y取相反数操作时，由于补码的正负取值范围不对称，-MIN_INT == MIN_INT，导致与预期的结果不一致
+B.  int tsub_ok(int x, int y)
+    {
+        if (y != MIN_INT) 
+        {
+            return tadd_ok(x, -y);
+        } 
+        else 
+        {
+            return x < 0 ? 1 : 0; 
+        }
+    }
