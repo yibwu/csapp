@@ -1,0 +1,7 @@
+int tadd_ok(int x, int y)
+{
+    int sum = x + y;
+    return (sum - x == y) && (sum - y == x);
+}
+
+条件sum - x == y和条件sum - y == x恒成立, 无法检测是否会溢出 
