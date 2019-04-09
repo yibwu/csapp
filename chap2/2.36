@@ -1,0 +1,14 @@
+#include <limits.h>
+
+int tmult_ok(int x, int y)
+{
+    long long z = (long long)x * (long long)y;
+    if (z >= (long long)INT_MIN && z <= (long long)INT_MAX)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
