@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int div16(int x)
+{
+	return (x < 0 ? (x + 1 << 4 - 1) : x) >> 4;
+}
+
+int main()
+{
+	int x1 = 32;
+	int x2 = -30;
+	printf("%d, %d\n", div16(x1), div16(x2));
+
+	return 0;
+}
