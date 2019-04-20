@@ -1,0 +1,16 @@
+A. x == (int)(double)x
+恒成立，int类型转为double类型数字不会溢出，也能够保留精度
+B. x == (int)(float)x
+不一定成立，int类型转为float类型精度可能会丢失，比如x = 2^30 + 1
+C. d == (double)(float)d
+不一定成立，double类型转为float类型可能会溢出或精度丢失, 
+D. f == (float)(double)f
+恒成立，float类型转为double类型数字不会溢出，也能够保留精度
+E. f == -(-f)
+不一定成立
+F. 1.0 / 2 == 1 / 2.0
+恒成立
+G. d * d >= 0.0
+恒成立，单独的符号位始终位0
+H. (f + d) - f == d
+不一定成立，当d很小，f很大的时候，等式左边可能为0
